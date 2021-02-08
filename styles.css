@@ -2,27 +2,37 @@ html{
   font-family: monospace;
 }
 nav {
+  position: relative;
+
   height: 40px;
+
   color: white;
   background-color: black;
-  position: relative;
+
 }
 
 .drop-down-content {
-  display: none;
   position: absolute;
+  z-index: 1;
+
+  display: none;
+
+  min-width: 100px;
+
   border: 1px solid black;
   border-radius: 5px;
-  min-width: 100px;
   background-color: white;
-  z-index: 1;
+
 }
 .drop-down-content a {
- text-decoration: none;
-  color: black;
-  width: 100px;
   display: block;
+
+  width: 100px;
   padding: 10px;
+
+ text-decoration: none;
+
+  color: black;
 }
 
 .drop-down-content a:hover {
@@ -36,8 +46,111 @@ nav {
 button {
   margin: 10px 0 0 10px;
   padding: 5px;
+
   color: black;
-  background-color: white;
-  border-radius: 5px;
   border: none;
+  border-radius: 5px;
+  background-color: white;
+}
+
+div select {
+  display: none;
+  float: right;
+  margin-top: 5px;
+}
+
+.mobile-ready-links {
+  display: flex;
+  justify-content: center;
+}
+
+.mobile-ready-links a {
+  text-decoration: none;
+  color: white;
+  background: black;
+  padding: 5px;
+  margin: 10px;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.text {
+  color: white;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@media (max-width: 960px) {
+  .mobile-ready-links {display: none; }
+  div select { display: flex; }
 }
