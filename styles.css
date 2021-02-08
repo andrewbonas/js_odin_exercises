@@ -1,0 +1,43 @@
+html{
+  font-family: monospace;
+}
+nav {
+  height: 40px;
+  color: white;
+  background-color: black;
+  position: relative;
+}
+
+.drop-down-content {
+  display: none;
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 5px;
+  min-width: 100px;
+  background-color: white;
+  z-index: 1;
+}
+.drop-down-content a {
+ text-decoration: none;
+  color: black;
+  width: 100px;
+  display: block;
+  padding: 10px;
+}
+
+.drop-down-content a:hover {
+  color: grey;
+}
+
+.show {
+  display: block;
+}
+
+button {
+  margin: 10px 0 0 10px;
+  padding: 5px;
+  color: black;
+  background-color: white;
+  border-radius: 5px;
+  border: none;
+}
