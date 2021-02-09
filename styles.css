@@ -1,37 +1,29 @@
-html{
+html {
   font-family: monospace;
 }
+
 nav {
   position: relative;
-
   height: 40px;
-
   color: white;
   background-color: black;
-
 }
 
 .drop-down-content {
   position: absolute;
   z-index: 1;
-
   display: none;
-
   min-width: 100px;
-
   border: 1px solid black;
   border-radius: 5px;
   background-color: white;
-
 }
+
 .drop-down-content a {
   display: block;
-
   width: 100px;
   padding: 10px;
-
- text-decoration: none;
-
+  text-decoration: none;
   color: black;
 }
 
@@ -46,7 +38,6 @@ nav {
 button {
   margin: 10px 0 0 10px;
   padding: 5px;
-
   color: black;
   border: none;
   border-radius: 5px;
@@ -141,16 +132,57 @@ div select {
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
 }
 
 @media (max-width: 960px) {
-  .mobile-ready-links {display: none; }
-  div select { display: flex; }
+  .mobile-ready-links {
+    display: none;
+  }
+
+  div select {
+    display: flex;
+  }
+}
+
+.form {
+  margin: 20px auto;
+  width: 50%;
+}
+
+form input {
+  width: 100%;
+  padding: 5px;
+  border: .05px grey solid;
+  border-radius: 5px;
+}
+
+#submit-btn {
+  border: 0.5px black solid;
+  text-align: center;
+  margin: 2px auto;
+}
+
+input:invalid {
+  border: .05px red solid;
+}
+
+input:valid {
+  border: .05px green solid;
 }
