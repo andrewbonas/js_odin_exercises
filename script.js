@@ -47,42 +47,45 @@ function showSlides(n) {
 }
 // Form Validation
 
-function emailCheck(email) {
+function emailCheck(email, error) {
   if (email === '') {
-    alert('Please provide an email');
+    error.innerHTML = 'Please Provide an email.';
     return false;
-  } if (email.indexOf('@') === false) {
-    alert('Please provide a proper email');
+  }
+  if (!email.includes('@')) {
+    error.innerHTML = 'Please provide a proper email';
     return false;
   }
   return true;
 }
 
-function countryCheck(country) {
+function countryCheck(country, error) {
   if (country === '') {
-    alert('Please provide a country');
+    error.innerHTML = 'Please provide a country';
     return false;
   }
   return true;
 }
 
-function zipCheck(zip) {
+function zipCheck(zip, error) {
   if (zip === '' || zip.length < 3) {
-    alert('Please provide a valid zip code');
+    error.innerHTML = 'Please provide a valid zip code';
     return false;
   }
   return true;
 }
 
-function passwordCheck(password, passwordConf) {
+function passwordCheck(password, passwordConf, error) {
   if (password === '' || passwordConf === '') {
-    alert('Please provide a password');
+    error.innerHTML = 'Please provide a password';
     return false;
-  } if (password.length < 6) {
-    alert('Please provide a password greater than 6 digits')
+  }
+  if (password.length < 6) {
+    error.innerHTML = 'Please provide a password greater than 6 digits';
     return false;
-  } if (password !== passwordConf) {
-    alert('The passwords do not match');
+  }
+  if (password !== passwordConf) {
+    error.innerHTML = 'The passwords do not match';
     return false;
   }
   return true;
@@ -95,15 +98,13 @@ function validateForm() {
   const zip = document.form.zip.value;
   const password = document.form.password.value;
   const passwordConf = document.form.password2.value;
-  if (emailCheck(email) === false) {
-    return
-  } if (countryCheck(country) === false) {
-    return
-  } if (zipCheck(zip) === false) {
-    return
-  } if (passwordCheck(password, passwordConf) === false) {
-  } else {
-    alert('Yaa you filled the form out correctly!');
-    form.reset();
-  }
+  const error = document.getElementById('error');
+
+  if (!emailCheck(email, error)) return;
+  if (!countryCheck(country, error)) return;
+  if (!zipCheck(zip, error)) return;
+  if (!passwordCheck(password, passwordConf, error)) return;
+  alert('Yaa you filled the form out correctly!');
+  error.innerHTML = '';
+  form.reset();
 }
