@@ -53,10 +53,13 @@ button {
   background-color: white;
 }
 
+.select-items {
+  display: flex;
+  justify-content: flex-end;
+}
+
 div select {
   display: none;
-  float: right;
-
   margin-top: 5px;
 }
 
