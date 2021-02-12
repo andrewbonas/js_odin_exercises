@@ -4,7 +4,9 @@ html {
 
 nav {
   position: relative;
+
   height: 40px;
+
   color: white;
   background-color: black;
 }
@@ -12,8 +14,11 @@ nav {
 .drop-down-content {
   position: absolute;
   z-index: 1;
+
   display: none;
+
   min-width: 100px;
+
   border: 1px solid black;
   border-radius: 5px;
   background-color: white;
@@ -21,9 +26,12 @@ nav {
 
 .drop-down-content a {
   display: block;
+
   width: 100px;
   padding: 10px;
+
   text-decoration: none;
+
   color: black;
 }
 
@@ -38,6 +46,7 @@ nav {
 button {
   margin: 10px 0 0 10px;
   padding: 5px;
+
   color: black;
   border: none;
   border-radius: 5px;
@@ -47,6 +56,7 @@ button {
 div select {
   display: none;
   float: right;
+
   margin-top: 5px;
 }
 
@@ -56,16 +66,19 @@ div select {
 }
 
 .mobile-ready-links a {
+  margin: 10px;
+  padding: 5px;
+
   text-decoration: none;
+
   color: white;
   background: black;
-  padding: 5px;
-  margin: 10px;
 }
 
 .slideshow-container {
-  max-width: 1000px;
   position: relative;
+
+  max-width: 1000px;
   margin: auto;
 }
 
@@ -74,50 +87,64 @@ div select {
 }
 
 .prev, .next {
-  cursor: pointer;
   position: absolute;
   top: 50%;
+
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: white;
-  font-size: 20px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+
+  cursor: pointer;
   user-select: none;
+  transition: 0.6s ease;
+
+  color: white;
+  border-radius: 0 3px 3px 0;
+
+  font-size: 20px;
 }
 
 .next {
   right: 0;
+
   border-radius: 3px 0 0 3px;
 }
 
 .text {
-  color: white;
-  font-size: 15px;
-  padding: 8px 12px;
   position: absolute;
   bottom: 8px;
+
   width: 100%;
+  padding: 8px 12px;
+
   text-align: center;
+
+  color: white;
+
+  font-size: 15px;
 }
 
 .numbertext {
-  color: white;
-  font-size: 12px;
   position: absolute;
   top: 0;
+
+  color: white;
+
+  font-size: 12px;
 }
 
 .dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
   display: inline-block;
+
+  width: 15px;
+  height: 15px;
+  margin: 0 2px;
+
+  cursor: pointer;
   transition: background-color 0.6s ease;
+
+  border-radius: 50%;
+  background-color: #bbb;
 }
 
 .active, dot:hover {
@@ -126,8 +153,8 @@ div select {
 
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
   animation-name: fade;
+  -webkit-animation-duration: 1.5s;
   animation-duration: 1.5s;
 }
 
@@ -162,21 +189,24 @@ div select {
 }
 
 .form {
-  margin: 20px auto;
   width: 50%;
+  margin: 20px auto;
 }
 
 form input {
   width: 100%;
   padding: 5px;
+
   border: .05px grey solid;
   border-radius: 5px;
 }
 
-#submit-btn {
-  border: 0.5px black solid;
-  text-align: center;
+#submit-btn, #giphy-button {
   margin: 2px auto;
+
+  text-align: center;
+
+  border: 0.5px black solid;
 }
 
 input:invalid {
@@ -189,4 +219,20 @@ input:valid {
 
 #error {
   color: red;
+}
+
+.api {
+  width: 50%;
+  margin: auto;
+}
+
+#giphy {
+  max-width: 100%;
+  margin: 5px;
+}
+#ginput {
+  padding: 5px;
+
+  border: .05px grey solid;
+  border-radius: 5px;
 }

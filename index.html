@@ -31,7 +31,6 @@
     </div>
     <select>
       <option value="" selected="selected">Select</option>
-
       <option value="">Home</option>
       <option value="">About</option>
       <option value="">Contact</option>
@@ -78,6 +77,13 @@
       <button id="submit-btn" onclick=" validateForm(); return false">Submit</button>
       <span id="error"></span>
     </form>
+  </div>
+
+  <div class='api'>
+    <img id="giphy" src=# />
+    <span id="giphy-message"></span>
+    <input type="text" id="ginput" placeholder="Search GIFs" />
+    <button id="giphy-button" onclick="giphyButton()">Click</button>
   </div>
 
   <script src="script.js"></script>

@@ -108,3 +108,28 @@ function validateForm() {
   error.innerHTML = '';
   form.reset();
 }
+
+async function giphy() {
+  const search = document.getElementById('ginput');
+  const msg = document.getElementById('giphy-message');
+  const img = document.querySelector('#giphy');
+  try {
+    const response = await fetch(`https://api.giphy.com/v1/gifs/translate?api_key=OMkxfL7EreAtBnW3c7yG8YIb8kXVODGB&s=${search.value}`, {
+      mode: 'cors'
+    });
+    const gifData = await response.json();
+    img.src = gifData.data.images.original.url;
+    img.style.display = 'block';
+    msg.innerHTML = '';
+    search.value = '';
+  } catch (text) {
+    img.style.display = 'none';
+    msg.innerHTML = 'Search GIFs here:';
+    search.value = '';
+  }
+}
+giphy();
+
+function giphyButton() {
+  giphy();
+}
